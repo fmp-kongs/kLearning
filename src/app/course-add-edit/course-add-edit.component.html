@@ -1,0 +1,43 @@
+<div mat-dialog-title>
+    <h1>Course title</h1>
+</div>
+<form [formGroup]="courseForm" (ngSubmit)="onSubmitForm()">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Course</mat-label>
+            <input matInput type="text" formControlName="course">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input matInput type="text" formControlName="description">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Name of Instructor</mat-label>
+            <input matInput type="text" formControlName="instructor">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Duration</mat-label>
+            <input matInput type="number" placeholder="1" formControlName="duration">
+          </mat-form-field>
+          
+    </div>
+
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Genre</mat-label>
+            <mat-select formControlName="genre">
+                <mat-option *ngFor = "let val of category" [value]="val">{{val}}
+
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button> Cancel</button>
+    <button mat-raised-button color="primary" type="submit"> Save</button>
+</div>
+
+</form>
