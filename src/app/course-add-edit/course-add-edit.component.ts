@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-course-add-edit',
   templateUrl: './course-add-edit.component.html',
   styleUrls: ['./course-add-edit.component.css']
 })
-export class CourseAddEditComponent {
+export class CourseAddEditComponent implements OnInit {
+
   courseForm: FormGroup;
 
   category:string[] = [
@@ -25,6 +26,22 @@ export class CourseAddEditComponent {
       genre:''
     });
   }
+
+  // constructor() { }
+ngOnInit() {
+this.courseForm = new FormGroup({
+course: new FormControl('', [Validators.required, Validators.minLength(4)]),
+description: new FormControl('', [Validators.required, Validators.minLength(5)]),
+instructor: new FormControl('', [Validators.required, Validators.minLength(4)]),
+duration: new FormControl('', [Validators.required, Validators.min(0)])
+
+});
+}
+
+public myError = (controlName: string, errorName: string) =>{
+return this.courseForm.controls[controlName].hasError(errorName);
+}
+
 
 
   onSubmitForm(){

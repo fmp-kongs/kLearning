@@ -1,29 +1,29 @@
 <div mat-dialog-title>
-    <h1>Course title</h1>
+    <h1>Course Details</h1>
 </div>
 <form [formGroup]="courseForm" (ngSubmit)="onSubmitForm()">
 <div mat-dialog-content class="content">
     <div class="row">
         <mat-form-field appearance="outline">
-            <mat-label>Course</mat-label>
-
-
-
-
-            <!-- <input matInput type="text" formControlName="course" required minlength="5"> -->
-            
-
-
-
-
+            <mat-label>Course Name</mat-label>
+            <input matInput type="text" formControlName="course">
+            <mat-hint align="end">More than 4 characters long.</mat-hint>
+            <mat-error *ngIf="myError('course', 'required')">Course name is required</mat-error>
+            <mat-error *ngIf="myError('course', 'minlength')">More than 4 characters</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Description</mat-label>
-            <input matInput type="text" formControlName="description" required minlength="5">
+            <input matInput type="text" formControlName="description">
+            <mat-hint align="end">More than 5 characters long.</mat-hint>
+            <mat-error *ngIf="myError('description', 'required')">Description is required</mat-error>
+            <mat-error *ngIf="myError('description', 'minlength')">More than 5 characters</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Name of Instructor</mat-label>
             <input matInput type="text" formControlName="instructor">
+            <mat-hint align="end">More than 4 characters long.</mat-hint>
+            <mat-error *ngIf="myError('instructor', 'required')">Course name is required</mat-error>
+            <mat-error *ngIf="myError('instructor', 'minlength')">More than 4 characters</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Duration</mat-label>

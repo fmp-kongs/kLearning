@@ -1,7 +1,10 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>
   beforeEach(() => TestBed.configureTestingModule({
     declarations: [AppComponent]
   }));
@@ -24,4 +27,22 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('kLearning app is running!');
   });
+
+
+  // manually written test cases
+
+  it("testing title",()=>{
+    expect(component.componentName).toBe("app")  // component created above beforeEach // run "ng test"
+  })
+
+  it("testing function",()=>{
+    expect(component.sum(40,60)).toBe(100)
+  })
+
+  it("testing html element",()=>{
+    const data = fixture.nativeElement
+    expect(data.querySelector(".unit-test").textContent).toContain("unit test")
+  })
+
+
 });

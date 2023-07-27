@@ -6,6 +6,25 @@
 
 
 .carousel-item img{
-    height: 710px;
+    height: 500px;
+    margin: auto;
 }
+
+.container {
+    position: relative;
+}
+#card-body {
+    top: 100;
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    background-color: #fff;
+}
+
+.banner {
+    background-color: blueviolet;
+    height: 60px;
+}
+
+
 
