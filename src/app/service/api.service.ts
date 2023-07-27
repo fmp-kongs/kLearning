@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from "rxjs/operators";
 import { CourseData } from '../interface/course';
+import { WeekContent } from '../interface/week-content';
+import { Content } from '../interface/content';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +12,9 @@ import { CourseData } from '../interface/course';
 export class ApiService {
 
   baseUrl ="assets/data/course-data.json";
+  baseUrl2 = "assets/data/course-content.json"
   courses:CourseData[] = [];
-
+  content : Content[] = [];
   constructor(private http: HttpClient) { }
 
 
@@ -30,6 +33,29 @@ export class ApiService {
       
     );
   }
+
+
+  getContentForCourses(): Observable<Content[]>{
+    return this.http.get<Content[]>(this.baseUrl2).pipe(
+      map((course)=>{
+        this.content=course
+        return course
+      }))
+    }
+
+  getContentById(id:number): Observable< Content | undefined> {
+    return this.getContentForCourses().pipe(
+      map((courses)=>
+        courses.find((course)=>course.courseId===id))
+      
+    );
+  }
+
+
+
+
+
+
 
 
 }

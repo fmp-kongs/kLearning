@@ -2,166 +2,164 @@
 
 {
     "courseId": 1,
-    "Weeks" : {
-        "week1":{
+    "Weeks" : [{
             "title": "content1",
             "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
         },
-        "week2":{
+        {
             "title": "content2",
             "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
     
         },
-        "week3":{
+        {
             "title": "content3",
             "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
         },
-        "week4":{
+        {
             "title": "content4",
             "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
         },
-        "week5":{
+        {
             "title": "content5",
             "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
-        }
-    }
-    
-
+        }]
 },
+
 {
     "courseId": 2,
-    "Weeks" :{
+    "Weeks" :[
 
-        "week1":{
+        {
             "title": "content1",
             "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
         },
-        "week2":{
+        {
             "title": "content2",
             "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
     
         },
-        "week3":{
+        {
             "title": "content3",
             "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
         },
-        "week4":{
+        {
             "title": "content4",
             "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
         },
-        "week5":{
+        {
             "title": "content5",
             "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
         }
-    }
+    ]
 },
+
+
+
+
 {
     "courseId": 3,
-    "Weeks" : {
-        "week1":{
+    "Weeks" : [
+        {
             "title": "content1",
             "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
         },
-        "week2":{
+        {
             "title": "content2",
             "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
     
         },
-        "week3":{
+        {
             "title": "content3",
             "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
         },
-        "week4":{
+        {
             "title": "content4",
             "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
         },
-        "week5":{
+        {
             "title": "content5",
             "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
         }
-    }
+    ]
 },
 {
     "courseId": 4,
-    "Weeks":{
+    "Weeks":[
 
-        "week1":{
+        {
             "title": "content1",
             "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
         },
-        "week2":{
+        {
             "title": "content2",
             "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
     
         },
-        "week3":{
+        {
             "title": "content3",
             "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
         },
-        "week4":{
+        {
             "title": "content4",
             "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
         },
-        "week5":{
+        {
             "title": "content5",
             "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
         }
-    }
+    ]
 },
 {
     "courseId": 5,
-    "Weeks":{
-
-        "week1":{
+    "Weeks":[
+        {
             "title": "content1",
             "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
         },
-        "week2":{
+        {
             "title": "content2",
             "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
     
         },
-        "week3":{
+        {
             "title": "content3",
             "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
         },
-        "week4":{
+        {
             "title": "content4",
             "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
         },
-        "week5":{
+        {
             "title": "content5",
             "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
         }
-    }
+    ]
 
 },
 {
     "courseId": 6,
-    "Weeks":{
-        
-        "week1":{
+    "Weeks":[{
             "title": "content1",
             "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
         },
-        "week2":{
+        {
             "title": "content2",
             "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
     
         },
-        "week3":{
+        {
             "title": "content3",
             "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
         },
-        "week4":{
+        {
             "title": "content4",
             "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
         },
-        "week5":{
+        {
             "title": "content5",
             "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
         }
-    }
+    ]
 }
 
 
@@ -169,3 +167,4 @@
 
 
 ]
+

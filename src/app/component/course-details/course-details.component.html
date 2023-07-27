@@ -1,21 +1,14 @@
 
 
-<div>
-   {{course?.courseName}}
-  </div>
-
-
-
-
-
 <div class="details">
   <div class="card" style="width: 40rem;">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body">
       <h1 class="card-title">{{course?.courseName}}</h1>
-      <p class="card-text"> ----- </p>
-      <h3>Students Enrolled</h3>
-      <h3>{{course?.courseRating}}</h3>
+      <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta porro sint facilis corrupti recusandae, natus iusto perspiciatis fuga eligendi. </p>
+      <h3>Students Enrolled : 1500</h3>
+      <h3>Rating : {{course?.courseRating}}</h3>
+      <h3>Category : {{course?.courseCategory}}</h3>
       <a href="#" class="btn btn-primary">Share</a>
     </div>
   </div>
@@ -24,9 +17,7 @@
       src="https://www.youtube.com/embed/kKvK2foOTJM">
     </iframe> 
     <div class="card-body">
-      <!-- <h5 class="card-title">Card title</h5> -->
-      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-      <a href="#" class="btn btn-primary d-md-flex justify-content-md-around" routerLink="/enrolled">Enroll</a>
+      <a href="#" class="btn btn-primary d-md-flex justify-content-md-around" [routerLink]="['/enrolled', course?.courseId]">Enroll</a>
     </div>
   </div>
 </div>

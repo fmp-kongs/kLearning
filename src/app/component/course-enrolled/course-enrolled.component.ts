@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Content } from "src/app/interface/content";
+import { CourseData } from 'src/app/interface/course';
+import { WeekContent } from 'src/app/interface/week-content';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-course-enrolled',
@@ -7,17 +11,53 @@ import { Content } from "src/app/interface/content";
   styleUrls: ['./course-enrolled.component.css']
 })
 export class CourseEnrolledComponent implements OnInit{
+  courseId? : number
+  course?: CourseData
+  courseContent?: Content
+
+  weekData? : WeekContent[]
 
 
 
-
-  
-
+  constructor(private api : ApiService, private router: ActivatedRoute){}
 
   ngOnInit(): void{
 
+    this.courseId =  parseInt(this.router.snapshot.params["id"])
+    if(this.courseId){
+
+      this.api.getCourseById(this.courseId).subscribe({
+        next: response => this.course = response
+      })
+
+      this.api.getContentById(this.courseId).subscribe({
+        next : response => this.weekData = response?.Weeks, 
+        
+      },
+      
+      )
+    }
+
+    
+
    
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // courseData:CourseData[] = []
   // sortData :CourseData[] = []

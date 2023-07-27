@@ -27,10 +27,16 @@ export class ProductsComponent implements OnInit {
     this.sortData = this.searching(value)
   }
 
-  searching(value : string){
-    return this.courseData.filter((course : CourseData) => {
-      course.courseCategory.includes(value)
-    })
+  searching(searchBy: string): any[] {
+
+    searchBy = searchBy.toLowerCase();
+
+    return this.courseData.filter(course =>
+
+      course.courseName.toLowerCase().includes(searchBy)
+
+    );
+
   }
 
   onSortSelected(id: number){
@@ -44,6 +50,9 @@ export class ProductsComponent implements OnInit {
   constructor(private api: ApiService) {}
 
   ngOnInit(): void{
+    this._searchText = ''
+    
+
     this.api.getCourses()
     .subscribe(res=>{
       this.courseData = res;

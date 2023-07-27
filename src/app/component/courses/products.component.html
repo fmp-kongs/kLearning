@@ -1,4 +1,13 @@
-<app-search></app-search>
+<div class="contain mt-5 p-5 ">
+  <form action="">
+
+      <div class="mb-3">
+          
+          <input type="text" class="form-control" placeholder="Search courses" [(ngModel)] = "searchText"></div>
+          
+  </form>
+</div>
+
 
 
 <div class="row" style="margin: 0 0;">
@@ -8,14 +17,12 @@
       </ul>  
     </div>
     <div class="col-10">
-      
-        <!-- <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0"> -->
-          <div class="wrapper">
+                <div class="wrapper">
 
             <div *ngFor="let course of sortData">
   
               <div class="card" style="width: 18rem;">
-                <img src={{course.courseThumbnail}} class="card-img-top" alt="...">
+                <img src={{course.courseThumbnail}} class="card-img-top" alt="..." style="width: 100%;">
                 <div class="card-body">
                   <h3 class="card-title">{{course.courseName}}</h3>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

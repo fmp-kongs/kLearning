@@ -20,7 +20,7 @@ const routes: Routes = [
     {path:'courses',component:ProductsComponent},
     {path:'courses/:id',component:CourseDetailsComponent},
     {path:'cart',component:CartComponent},
-    {path:'enrolled',component:CourseEnrolledComponent},
+    {path:'enrolled/:id',component:CourseEnrolledComponent},
     {path: '', redirectTo:'home',pathMatch:'full'},
     {path:'**',pathMatch:'full',component:ErrorComponent}
 ];
