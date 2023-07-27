@@ -9,6 +9,11 @@ import { Content } from "src/app/interface/content";
 export class CourseEnrolledComponent implements OnInit{
 
 
+
+
+  
+
+
   ngOnInit(): void{
 
    
@@ -28,38 +33,38 @@ export class CourseEnrolledComponent implements OnInit{
   // }
 
 
-  weeklyContent : Content[] = [
-    {"contentId":1,
-    "contentName":"Week-1",
-    "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
+  // weeklyContent : Content[] = [
+  //   {"contentId":1,
+  //   "contentName":"Week-1",
+  //   "contentURL":"https://www.youtube.com/embed/kKvK2foOTJM"
 
-    },
-    {"contentId":2,
-    "contentName":"Week-2",
-    "contentURL":"https://www.youtube.com/embed/RQVl1nmuyq4"
+  //   },
+  //   {"contentId":2,
+  //   "contentName":"Week-2",
+  //   "contentURL":"https://www.youtube.com/embed/RQVl1nmuyq4"
 
-    },
-    {"contentId":3,
-    "contentName":"Week-3",
-    "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
+  //   },
+  //   {"contentId":3,
+  //   "contentName":"Week-3",
+  //   "contentURL":"https://www.youtube.com/embed/u4ZoJKF_VuA"
 
-    },
-    {"contentId":4,
-    "contentName":"Week-4",
-    "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
+  //   },
+  //   {"contentId":4,
+  //   "contentName":"Week-4",
+  //   "contentURL":"https://www.youtube.com/embed/4O2JK_94g3Y"
 
-    },
-    {"contentId":5,
-    "contentName":"Week-5",
-    "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
+  //   },
+  //   {"contentId":5,
+  //   "contentName":"Week-5",
+  //   "contentURL":"https://www.youtube.com/embed/F4Zu5ZZAG7I"
 
-    },
-    {"contentId":6,
-    "contentName":"Week-6",
-    "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
+  //   },
+  //   {"contentId":6,
+  //   "contentName":"Week-6",
+  //   "contentURL":"https://www.youtube.com/embed/LnJwH_PZXnM"
 
-    }
-  ]
+  //   }
+  // ]
 
 
 

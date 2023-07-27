@@ -1,5 +1,7 @@
+import { WeekContent } from "./week-content";
+
 export interface Content {
-    contentId:number,
-  contentName:string,
-  contentURL:string
+    courseId:number,
+    Weeks: WeekContent[]
+  
 }

@@ -12,6 +12,7 @@ export class ProductsComponent implements OnInit {
 
   courseData:CourseData[] = []
   sortData :CourseData[] = []
+  filterdata:CourseData[] = []
 
   categorySelected : number = 0
 
@@ -58,19 +59,19 @@ export class ProductsComponent implements OnInit {
   categories : Category[] = [
     {
       "id" : 1,
-      "name" : "technology"
+      "name" : "Technology"
     },
     {
       "id" : 2,
-      "name" : "art"
+      "name" : "Art"
     },
     {
       "id" : 3,
-      "name" : "story-telling"
+      "name" : "Story-telling"
     },
     {
       "id" : 4,
-      "name" : "cinematography"
+      "name" : "Cinematography"
     }
   ]
 

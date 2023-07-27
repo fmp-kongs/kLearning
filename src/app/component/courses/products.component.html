@@ -1,27 +1,36 @@
 <app-search></app-search>
 
 
-<div class="row">
-    <div class="col-4">
+<div class="row" style="margin: 0 0;">
+    <div class="col-2">
       <ul id="list-example" class="list-group" *ngFor="let cat of categories">
-        <li class="list-group-item list-group-item-action" [value] = "cat.id" [class.active] = "categorySelected === cat.id" (click)="onSortSelected(cat.id)">{{cat.name}}</li>
-      </ul>
+        <li class="list-group-item list-group-item-action" [value] = "cat.id" [class.active] = "categorySelected === cat.id" (click)="onSortSelected(cat.id)" style="width: 200px; margin-left: 20px;">{{cat.name}}</li>
+      </ul>  
     </div>
-    <div class="col-8">
-      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-        <div *ngFor="let course of sortData">
-               <div class="card">
-                 {{course.courseName}}
-                 {{course.courseRating}}
-                 {{course.courseThumbnail}}
-                 {{course.courseCategory}}
-               </div>
-                    <div class="btn btn-primary" [routerLink]="['/courses', course.courseId]">Take me</div>
+    <div class="col-10">
+      
+        <!-- <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0"> -->
+          <div class="wrapper">
+
+            <div *ngFor="let course of sortData">
+  
+              <div class="card" style="width: 18rem;">
+                <img src={{course.courseThumbnail}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">{{course.courseName}}</h3>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h4>Rating : {{course.courseRating}}</h4>
+                  <h4>Category : {{course.courseCategory}}</h4>
                 </div>
-                
-        </div>
+                <div class="btn btn-primary" [routerLink]="['/courses', course.courseId]">Go to course</div>
+                </div>
+              </div>
+
+          </div>
+          
+            </div>
       </div>
-    </div>
+      <!-- </div> -->
 
 
 
