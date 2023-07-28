@@ -31,4 +31,16 @@ export class CourseDetailsComponent {
     
 
   }
+
+  onEnrolled(){
+
+    if(this.course)
+
+    this.api.myCourses.push(this.course)
+
+    console.log(this.api.myCourses)
+
+  }
+
 }
+

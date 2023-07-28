@@ -17,7 +17,8 @@
       src="https://www.youtube.com/embed/kKvK2foOTJM">
     </iframe> 
     <div class="card-body">
-      <a href="#" class="btn btn-primary d-md-flex justify-content-md-around" [routerLink]="['/enrolled', course?.courseId]">Enroll</a>
+      <a href="#" class="btn btn-primary d-md-flex justify-content-md-around" [routerLink]="['/enrolled', course?.courseId]" (click)="onEnrolled()">Enroll</a>
+      
     </div>
   </div>
 </div>

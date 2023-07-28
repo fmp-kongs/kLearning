@@ -22,7 +22,7 @@
             <mat-label>Name of Instructor</mat-label>
             <input matInput type="text" formControlName="instructor">
             <mat-hint align="end">More than 4 characters long.</mat-hint>
-            <mat-error *ngIf="myError('instructor', 'required')">Course name is required</mat-error>
+            <mat-error *ngIf="myError('instructor', 'required')">Instructor name is required</mat-error>
             <mat-error *ngIf="myError('instructor', 'minlength')">More than 4 characters</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
@@ -34,7 +34,7 @@
 
     <div class="row">
         <mat-form-field appearance="outline">
-            <mat-label>Genre</mat-label>
+            <mat-label>Category</mat-label>
             <mat-select formControlName="genre">
                 <mat-option *ngFor = "let val of category" [value]="val">{{val}}
 

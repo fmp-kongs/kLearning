@@ -15,6 +15,7 @@ export class ApiService {
   baseUrl2 = "assets/data/course-content.json"
   courses:CourseData[] = [];
   content : Content[] = [];
+  myCourses : CourseData[] = [];
   constructor(private http: HttpClient) { }
 
 

@@ -27,13 +27,13 @@ export class ProductsComponent implements OnInit {
     this.sortData = this.searching(value)
   }
 
-  searching(searchBy: string): any[] {
+  searching(searchBy: string) {
 
-    searchBy = searchBy.toLowerCase();
+    searchBy = searchBy.toLocaleLowerCase();
 
-    return this.courseData.filter(course =>
+    return this.courseData.filter((course : CourseData) =>
 
-      course.courseName.toLowerCase().includes(searchBy)
+      course.courseName.toLocaleLowerCase().includes(searchBy)
 
     );
 
